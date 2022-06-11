@@ -1,6 +1,6 @@
 * {box-sizing: border-box}
 
-/* Set height and width of body and the document to 100% */
+/* Set height of body and the document to 100% */
 html, body {
   height: 100%;
   width: 100%;
@@ -8,8 +8,9 @@ html, body {
   padding: 0;
 }
 
+/* include this so that body fills the viewport */
 body {
-  font-family:   font-family: Georgia, 'Times New Roman', Times, serif;;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 /* Style tab links */
@@ -62,14 +63,14 @@ h4 {
 }
 
 h5 {
-  font-size: 13pt;
-  margin-bottom: -1pt;
+    font-size: 13pt;
+    margin-bottom: -1pt;
 }
 
 h6 {
-  font-size: 12pt;
-  margin-top: 5pt;
-  margin-bottom: -1pt;
+    font-size: 12pt;
+    margin-top: 5pt;
+    margin-bottom: -1pt;
 
 }
 
@@ -87,8 +88,13 @@ h6 {
     position: absolute;
     top: 130px;
     right: 60px;
-    opacity: 0.8;
+    opacity: 0.5;
+    transition: opacity 1;
     border: solid 5px rgb(209, 0, 122); ;
+}
+
+#my-photo:hover {
+  opacity: 1;
 }
 
 div.list-content {
