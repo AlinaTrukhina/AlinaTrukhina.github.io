@@ -10,7 +10,7 @@ html, body {
 
 /* include this so that body fills the viewport */
 body {
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Style tab links */
