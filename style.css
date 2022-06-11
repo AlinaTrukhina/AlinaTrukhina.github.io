@@ -80,14 +80,14 @@ h6 {
 }
 
 .tagline {
-    width: 50%;
+    font-size: larger;
 }
 
 #my-photo {
     width: 20%;
     position: absolute;
-    top: 70px;
-    right: 20px;
+    top: 130px;
+    right: 60px;
     opacity: 0.8;
     border: solid 5px rgb(209, 0, 122); ;
 }
