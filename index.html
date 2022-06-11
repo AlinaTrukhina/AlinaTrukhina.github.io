@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width" initial-scale=1.0">
+  <title>Resume - Alina Trukhina </title>
+  <link rel="stylesheet" type="text/css" href="stylesheetV1.css">
+</head>
+<body>
+
+    <button class="tablink" onclick="openPage('Home', this)" id="defaultOpen">Cover Page</button>
+    <button class="tablink" onclick="openPage('Experience', this)">Experience</button>
+    <button class="tablink" onclick="openPage('Education', this)">Education</button>
+  
+
+    <div id= "Home" class = "tabcontent">
+        <div class = "info-container">
+            <h1> Alina Trukhina </h1>
+            <h3> 2501 13th Ave S </h3>
+            <h3> Minneapolis, MN 55404 </h3>
+        </div>    
+            <img id="my-photo" alt="" src="https://live.staticflickr.com/65535/52138518656_71eb16c660_b.jpg">
+        
+
+        <section class = "tagline" class = "box">
+            <p> Chemical Engineering professional enthusiastic about challeging new career in software development.</p>
+        </section>
+    </div>
+ 
+    <div id= "Experience" class = "tabcontent">
+        <h3>Professional experience</h3>
+        <div>
+        <h4> ioMosaic </h4>
+        <h5> Senior Safety and Risk Management Consultant</h5>
+        <h6> January 2020 - Present</h6>
+        <div class="list-content ">
+        <ul>
+            <li>Crated Flare System Design course material for Process Safety Learning platform</li>
+            <li>Trained engineers in iPRSM software</li>
+            <li>Reviewed engineer work for large, plant-wide project</li>
+            <li>Managed a two-person team on revalidation project</li>
+        </ul>
+        </div>
+        <h5> Safety and Risk Management Consultant </h5>
+        <h6>Jan 2013 - January 2020</h6>  
+        <div class="list-content">
+        <ul>
+            <li>Wrote how-to technology guides for SuperChems and HYSYS software</li>
+            <li>Facilitated data collection onsite for plant-wide revalidation project</li>
+            <li>Performed complex reactive systems design</li>
+            <li>Completed unit-wide flare system design</li>
+        </ul> 
+        </div>
+        <h5> Safety and Risk Management Analyst </h5>
+        <h6>June 2011 - January 2013</h6> 
+        <div class="list-content">
+        <ul>
+            <li>Gained high knowledge of API, ASME standards</li>
+            <li>Efficiently performed revalidations for current designs for pressure relief systems </li>
+            <li>Gained proficiency with proprietary SuperChems software</li>
+        </ul>
+        </div>
+        </div>
+    </div>
+    <div id="Education" class = "tabcontent">
+        <h3>Education</h3>
+        <h4>University of Minnesota - Twin Cities</h4>
+        <h5>BS in Chemical Engineering</h5>
+        <h5>BS in Chemistry</h5>
+        <h6>September 2006 - December 2010</h6> 
+
+        <h4>AppAcademy Open</h4>
+        <h5>Web Development Fundamentals</h5>
+        <h6>March 2022 - May 2022</h6>
+        <div class="list-content">
+            <ul>
+            <li>Continuing to learn and practive in a different course format</li>
+            </ul>
+        </div>
+
+        <h4>NuCamp Online Course</h4>
+        <h5>Web Development Fundamentals</h5>
+        <h6>December 2021 - January 2022</h6>
+        <div class="list-content">
+            <ul>
+            <li>Learned the basics of HTML and CSS</li>
+            <li>Created simple JavaScript games as part of the course</li>
+            </ul>
+        </div>
+        <div class = "container">
+            <button type="button" onclick="colorGame()">Play Color Guessing Game</button>
+            <button type="button" onclick="rollDice()">Play Dice Rolling Game</button>
+        </div>
+        
+    </div>
+
+<script>
+
+    //JavaScript for the tablinks
+function openPage(pageName,elmnt) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  document.getElementById(pageName).style.display = "block";
+//  elmnt.style.backgroundColor = color;
+}
+
+//Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+
+
+    // Color Guessing game
+    // src="js/color-guessing-game.js"
+    const COLORS_ARRAY = ['black', 'brown' ,'gold', 'gray', 'green', 'magenta', 'orange', 'red', 'white', 'yellow', 'blue'];
+    let numTries = 0;
+
+    function colorGame() {
+        let guess = '';
+        let correct = false;
+        
+        const targetIndex = Math.floor(Math.random() * COLORS_ARRAY.length);
+        const target = COLORS_ARRAY[targetIndex];
+//        console.log(target); previously checked # of color
+        do {
+            COLORS_ARRAY.sort();
+            guess = prompt('I am thinking of one of these colors:\n\n' + COLORS_ARRAY.join(', ') + '\n\nWhat color am I thinking of?\n');
+                            if (guess === null) {
+                alert('You did not provide a guess.')
+                return;
+            }
+            
+            guessNumber = +guess;
+            numTries += 1;
+            correct = colorCheckGuess(guess, target);
+
+        } while(!correct);
+        alert('Congratulations! You guessed correctly! The color was ' + target + ' and the number of guesses was ' + numTries + ' .' );
+        document.body.style.background = guess;
+
+
+    }
+    function colorCheckGuess(guess, target) {
+        let correct = false;
+        guess = guess.toLowerCase();
+
+        if (!COLORS_ARRAY.includes(guess)) {
+            alert('Your color is not on the list. Your number of guesses is ' + numTries + ' .');
+        }
+        else if (guess > target) {
+            alert('Your color guess is alphabetically higher than my color. Your number of guesses is ' + numTries + ' .');
+        }
+        else if (guess < target) {
+            alert('Your color guess is alphabetically lower than my color. Your number of guesses is ' + numTries + ' .');
+        }
+        else {
+            correct = true;
+        }
+        return correct;
+    }
+    
+// Dice game
+function rollDice() {
+    let goldCoins = 0;
+
+    for (let i = 0; i < 10; i++) {
+        const roll = Math.floor(Math.random() * 6) + 1;
+        alert('You roll a ' + roll + '. \n Roll a 1 = game over \n Roll a 2 = roll again \n Roll 3 or 4 = lose coins \n Roll 5 or 6 = win coins');
+        if (roll === 1) {
+            alert('Game over, no more rolls! You have won a total of ' + goldCoins + '.');
+            break;
+        }
+        if (roll === 2) {
+            alert('You get to roll again.')
+            continue;
+        }
+        if ((roll <= 4) && (goldCoins > 0)) {
+            goldCoins -= roll; 
+            console.log(goldCoins);
+            alert('You lose ' + roll + ' gold coins! You have a total of ' + goldCoins + ' coins.');
+            continue;
+        }
+        
+        if (roll < 5) {
+            continue;
+        }
+        goldCoins += roll; 
+        alert('Congratulations, you win ' + roll + ' gold coins! You have won a total of ' + goldCoins + ' coins.');
+       
+    }
+    alert('You have won a total of ' + goldCoins + ' gold coins!');
+}
+
+</script>
+</body>
+</html>
