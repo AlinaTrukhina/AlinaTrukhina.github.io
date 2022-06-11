@@ -1,0 +1,92 @@
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* include this so that body fills the viewport */
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Style tab links */
+.tablink {
+  background-color:  rgb(209, 0, 122); 
+  color: #7bcfff;
+  float: left;
+  border: solid grey 1px;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 20px;
+  font-weight: bold;
+  width: 33.33%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content */
+.tabcontent {
+  color: black;
+  border: solid grey 5px;
+  background-color: #7bcfff;
+  display: none;
+  padding: 60px 40px;
+  height: 100%;
+  width: 100%; 
+  overflow-y: auto;
+}
+
+h1 {
+  margin-bottom: -1pt;
+}
+
+h2 {
+    font-size: 28pt;
+}
+
+h3 {
+    font-size: 24pt;    
+}
+
+h4 {
+    font-size: 18pt;
+}
+
+h5 {
+  font-size: 13pt;
+  margin-bottom: -1pt;
+}
+
+h6 {
+  font-size: 12pt;
+  margin-bottom: -1pt;
+}
+
+.photo-container {
+    width: 50%;
+    position: relative;  
+}
+
+.tagline {
+    width: 50%;
+}
+
+#my-photo {
+    width: 20%;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    opacity: 0.8;
+    border: solid 5px rgb(209, 0, 122); ;
+}
+
+div.list-content {
+    font-size: 10pt;
+}
