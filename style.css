@@ -10,7 +10,7 @@ html, body {
 
 /* include this so that body fills the viewport */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family:   font-family: Georgia, 'Times New Roman', Times, serif;;
 }
 
 /* Style tab links */
@@ -44,15 +44,17 @@ body {
 }
 
 h1 {
-  margin-bottom: -1pt;
+    font-size: 32pt;
+    margin-bottom: -1pt;
 }
 
 h2 {
-    font-size: 28pt;
+    font-size: 26pt;
 }
 
 h3 {
-    font-size: 24pt;    
+    font-size: 22pt;
+    margin-bottom: 0;    
 }
 
 h4 {
