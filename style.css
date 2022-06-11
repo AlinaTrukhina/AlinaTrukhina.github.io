@@ -1,6 +1,6 @@
 * {box-sizing: border-box}
 
-/* Set height and width of body and the document to 100% */
+/* Set height of body and the document to 100% */
 html, body {
   height: 100%;
   width: 100%;
@@ -8,6 +8,7 @@ html, body {
   padding: 0;
 }
 
+/* include this so that body fills the viewport */
 body {
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
@@ -15,7 +16,7 @@ body {
 /* Style tab links */
 .tablink {
   background-color:  rgb(209, 0, 122); 
-  color: #7bcfff;
+  color: #9ec3e9;
   float: left;
   border: solid grey 1px;
   outline: none;
@@ -34,7 +35,7 @@ body {
 .tabcontent {
   color: black;
   border: solid grey 5px;
-  background-color: #7bcfff;
+  background-color: #9ec3e9;
   display: none;
   padding: 60px 40px;
   height: 100%;
@@ -56,6 +57,7 @@ h3 {
 
 h4 {
     font-size: 18pt;
+    margin-bottom: -1pt;
 }
 
 h5 {
@@ -65,7 +67,9 @@ h5 {
 
 h6 {
   font-size: 12pt;
+  margin-top: 5pt;
   margin-bottom: -1pt;
+
 }
 
 .photo-container {
