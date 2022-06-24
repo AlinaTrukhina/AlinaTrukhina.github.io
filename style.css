@@ -8,7 +8,6 @@ html, body {
   padding: 0;
 }
 
-/* include this so that body fills the viewport */
 body {
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
@@ -25,6 +24,7 @@ body {
   font-size: 20px;
   font-weight: bold;
   width: 33.33%;
+  position: sticky;
 }
 
 .tablink:hover {
@@ -44,59 +44,64 @@ body {
 }
 
 h1 {
-    font-size: 32pt;
-    margin-bottom: -1pt;
+  font-size: 32pt;
+  margin-top: 0;
+  margin-bottom: -1pt;
 }
 
 h2 {
-    font-size: 26pt;
+  font-size: 26pt;
 }
 
 h3 {
-    font-size: 22pt;
-    margin-bottom: 0;    
+  font-size: 22pt;
+  margin-bottom: 0;    
 }
 
 h4 {
-    font-size: 18pt;
-    margin-bottom: -1pt;
+  font-size: 18pt;
+  margin-bottom: -1pt;
 }
 
 h5 {
-    font-size: 14pt;
-    margin-bottom: -1pt;
+  font-size: 16pt;
+  margin-bottom: -1pt;
 }
 
 h6 {
-    font-size: 12pt;
-    margin-top: 5pt;
-    margin-bottom: -1pt;
-
+  font-size: 12pt;
+  margin-top: 5pt;
+  margin-bottom: -1pt;
 }
 
-.photo-container {
-    width: 50%;
-    position: relative;  
+.home-container {
+  width: 80%;
+  float: left;
 }
 
-.tagline {
-    font-size: larger;
+.info-container {
+  width: 80%;
 }
+
 
 #my-photo {
-    width: 20%;
-    position: absolute;
-    top: 130px;
-    right: 60px;
-    opacity: 0.5;
-    transition: opacity 1;
-    border: solid 5px rgb(209, 0, 122); ;
+  width: 20%;
+  float: right;
+  top: 130px;
+  right: 60px;
+  opacity: 0.5;
+  transition: opacity 1;
+  border: solid 5px rgb(209, 0, 122); ;
 }
 
 #my-photo:hover {
   opacity: 1;
 }
 
+.tagline {
+  font-size: larger;
+}
+
 div.list-content {
-    font-size: 10pt;
+  font-size: 10pt;
 }
