@@ -108,10 +108,10 @@ function palindrome() {
     if (replaced[i] === replaced[replaced.length - i - 1]) {
 //      console.log(replaced[i]);
     } else {
-      alert('No');
+      alert('No - this is not a palindrome.');
       return false;
     }
   }
-    alert('Yes');
+    alert('Yes - this is a palindrome.');
     return true;
 }
